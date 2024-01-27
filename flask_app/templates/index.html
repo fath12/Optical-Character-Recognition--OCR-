@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction Webpage</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <h1>Model Prediction Webpage</h1>
+
+    <form id="predictionForm" enctype="multipart/form-data">
+        <label for="inputData">Upload JPEG Image:</label>
+        <input type="file" id="inputData" name="imageFile" accept=".jpg, .jpeg">
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function predict() {
+            var inputFile = document.getElementById('inputData').files[0];
+
+            var formData = new FormData();
+            formData.append('imageFile', inputFile);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = 'Prediction: ' + data.prediction;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = 'Error occurred.';
+            });
+        }
+    </script>
+
+</body>
+</html>

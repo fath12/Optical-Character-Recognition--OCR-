@@ -1,0 +1,5 @@
+4. Give an example of document AI using OCR?
+
+For example, receipt reading.
+
+Using OCR, we can extract the texts in the receipt. Then the text is processed by semantic entity recognition so we can now which text is item name, price, etc. With that information, we can make list of items we buy and save the information in a database.

@@ -1,0 +1,13 @@
+3. Please describe OCR pipeline for translation, such as in Google translate?
+
+First, the image is processed by text detector.
+
+Second, text detector gives the bonding box coordinates' of the texts
+
+Third, crop the texts, then process the crop so that the text image is clear, for example by rotating the image.
+
+Fourth, The text crops processed by text recognition so that we get the string.
+
+Fifth, The text strings are combined and passed to translator model.
+
+Now, we get the translations.

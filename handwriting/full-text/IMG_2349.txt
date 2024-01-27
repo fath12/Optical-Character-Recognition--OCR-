@@ -1,0 +1,5 @@
+1. Explain what is OCR?
+
+OCR is a field of computer vision that focus on reading text from images. The task usually consists of two parts. First is text detection and second is text recognition.
+
+Text detection focuses on detecting text region whereas text recognition focuses on converting text images to string.

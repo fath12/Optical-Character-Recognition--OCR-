@@ -1,0 +1,5 @@
+5. Explain about model architecture of text detection and recognition
+
+Text detection is just a subtask of object detection. Thus, we can use common CNN-based architecture such as YOLO, Mask-RCNN, etc. To support custom text shape, usually the model is buit based on segmentation architecture.
+
+Text recognition is based on CNN/Transformer for the backbone, and the features are processed with sequential model such as LSTM.

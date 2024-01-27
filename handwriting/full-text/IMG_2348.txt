@@ -1,0 +1,3 @@
+2. How OCR can be used?
+
+Applications of OCR includes vehicle plate recognition, translation, document analysis, and others. You can find the examples of OCR in yout daily life such as google translate.
